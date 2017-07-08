@@ -17,5 +17,5 @@ sudo apt install libgranite-dev
 
 Then you should be able to generate the bindings:
 ```bash
-pkg-config --cflags glib-2.0 gtk+-3.0 gee-0.8 | xargs bindgen /usr/include/granite/granite.h -o src/ffi.rs --
+pkg-config --cflags glib-2.0 gtk+-3.0 gee-0.8 | xargs bindgen /usr/include/granite/granite.h -o src/ffi.rs --whitelist-type '_?[Gg]ranite.*' --
 ```
